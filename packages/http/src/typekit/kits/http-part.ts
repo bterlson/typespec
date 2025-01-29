@@ -20,7 +20,7 @@ export interface HttpPartKit {
   unpack(type: Type): Type;
 }
 
-export interface TypekitExtension {
+interface TypekitExtension {
   httpPart: HttpPartKit;
 }
 

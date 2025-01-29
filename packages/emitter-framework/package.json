@@ -21,6 +21,10 @@
       "node": "./dist/src/typescript/index.js",
       "types": "./dist/src/typescript/index.d.ts"
     },
+    "./csharp": {
+      "node": "./dist/src/csharp/index.js",
+      "types": "./dist/src/csharp/index.d.ts"
+    },
     "./testing": {
       "node": "./dist/src/testing/index.js",
       "types": "./dist/src/testing/index.d.ts"
@@ -37,7 +41,8 @@
   },
   "dependencies": {
     "@alloy-js/core": "https://pkg.pr.new/alloy-framework/alloy/@alloy-js/core@903a8321e8e85c7c9b47d4d9b4f0aadc40422615",
-    "@alloy-js/typescript": "https://pkg.pr.new/alloy-framework/alloy/@alloy-js/typescript@903a8321e8e85c7c9b47d4d9b4f0aadc40422615"
+    "@alloy-js/typescript": "https://pkg.pr.new/alloy-framework/alloy/@alloy-js/typescript@903a8321e8e85c7c9b47d4d9b4f0aadc40422615",
+    "@alloy-js/csharp": "https://pkg.pr.new/alloy-framework/alloy/@alloy-js/csharp@903a8321e8e85c7c9b47d4d9b4f0aadc40422615"
   },
   "devDependencies": {
     "@babel/cli": "^7.24.8",
