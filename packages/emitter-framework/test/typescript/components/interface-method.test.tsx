@@ -14,34 +14,7 @@ beforeEach(async () => {
   runner = await createEmitterFrameworkTestRunner();
 });
 
-it("creates an interface method", async () => {
-  const { getName } = (await runner.compile(
-    `@test interface basicInterface { @test op getName(id: string): string; };`,
-  )) as {
-    getName: Operation;
-  };
-
-  const res = render(
-    <Output>
-      <SourceFile path="test.ts">
-        <InterfaceDeclaration name="basicInterface">
-          <InterfaceMethod type={getName} name={getName.name} />
-        </InterfaceDeclaration>
-      </SourceFile>
-    </Output>,
-  );
-
-  assertFileContents(
-    res,
-    d`
-    interface basicInterface {
-      getName(id: string): string
-    }
-  `,
-  );
-});
-
-describe("function types with a `type` prop", () => {
+describe("interface methods with a `type` prop", () => {
   let runner: BasicTestRunner;
 
   beforeEach(async () => {
@@ -73,7 +46,7 @@ describe("function types with a `type` prop", () => {
     );
   });
 
-  it("creates an async function type", async () => {
+  it("creates an async interface function", async () => {
     const { getName } = (await runner.compile(`
       @test op getName(id: string): string;
     `)) as { getName: Operation };

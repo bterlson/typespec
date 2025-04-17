@@ -35,16 +35,6 @@ export function InterfaceMember(props: InterfaceMemberProps) {
   }
 
   if ($.operation.is(props.type)) {
-    return (
-      <InterfaceMethod type={props.type} />
-      // <ts.InterfaceMember
-      //   name={name}
-      //   type={
-      //     <>
-      //       ({params}) =&gt {returnType}
-      //     </>
-      //   }
-      // />
-    );
+    return <InterfaceMethod type={props.type} />;
   }
 }
